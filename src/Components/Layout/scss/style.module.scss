@@ -1,0 +1,45 @@
+.LayoutGrid{
+    display: grid;
+    grid-template: 
+    "header header"
+    "aside ."/.14fr 1fr;
+
+    grid-template-rows: .1fr 1fr;
+    &Cabecalho{
+        position: relative;
+        z-index: 20;
+        grid-area: header;
+        background: #2B9AB5;
+        box-shadow: 0 6px 10px #00000055;
+        display: flex;
+        justify-content: space-around;
+        &Margem{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            div{
+                display: flex;
+                gap: 8px;
+            }
+            width: 75%;
+        }
+        padding: 1em 0;
+        width: 100%;
+    }
+    &SideBar{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        grid-area:aside;
+        background: #195969;
+        nav{
+            background: #22798F;
+            text-align: center;
+            border-radius: 10px 0px 0px 10px;
+            width: 50%;
+            height: 80%;
+        }
+        height: 100vh;
+    }
+    height: 100vh;
+}
