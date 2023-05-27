@@ -1,24 +1,43 @@
 import style from './scss/style.module.scss'
-import { ReactNode } from "react";
+import './scss/style.scss'
+
+import { ReactNode, useEffect, useState } from "react";
+
+import {CgClose} from 'react-icons/cg'
+import {BiBell} from 'react-icons/bi'
+
+import Switch from '../Switch';
+
 
 type htmlChildren = {
     children:ReactNode;
 }
+
 export default function Layout({children}:htmlChildren) {
+
+  const [darkMode, setDarkMode] = useState(true)
+
   return (
-    <main className={style.LayoutGrid}>
+    <main
+    className={
+        `
+        ${style.LayoutGrid}
+        ${darkMode? `darkMode`:`lightMode`}
+        `
+    }
+    >
            <header className={style.LayoutGridCabecalho}>
                 <div className={style.LayoutGridCabecalhoMargem}>
                     <h1>Logo</h1>
-                    <div>
-                        <p>switch</p>
-                        <p>notificação</p>
+                    <nav>
+                        <Switch obter={setDarkMode}/>
+                        <BiBell size={40} className={darkMode? `darkMode`:`lightMode`}/>
                         <p>perfil</p>
-                    </div>
+                    </nav>
                 </div>
            </header>
            <aside className={style.LayoutGridSideBar}>
-            <h1>close</h1>
+               <h1>Close</h1>
                 <nav>
                     <a href="#">Home</a>
                 </nav>
