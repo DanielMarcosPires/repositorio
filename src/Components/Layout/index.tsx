@@ -1,9 +1,8 @@
 import style from './scss/style.module.scss'
 import './scss/style.scss'
 
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useState } from "react";
 
-import {CgClose} from 'react-icons/cg'
 import {BiBell} from 'react-icons/bi'
 
 import Switch from '../Switch';

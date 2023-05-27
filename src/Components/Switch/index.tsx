@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { useState } from "react";
 import style from "./scss/style.module.scss"
 import "./scss/style.scss"
 
