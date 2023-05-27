@@ -23,7 +23,7 @@ export default function Layout({children}:htmlChildren) {
                     <a href="#">Home</a>
                 </nav>
            </aside>
-           <h1>Repositorio</h1>
+           {children}
     </main>
   )
 }
