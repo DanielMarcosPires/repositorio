@@ -7,9 +7,7 @@ import "./scss/style.scss"
 export default function Switch({obter}:any) {
 
   const [flipflop,setFlipflop] = useState(false);
-  useEffect(()=>{
-    obter(flipflop)
-  },[flipflop, obter])
+  
 
   function handleClick(){
     obter(flipflop)
