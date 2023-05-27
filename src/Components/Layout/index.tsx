@@ -6,8 +6,7 @@ type htmlChildren = {
 export default function Layout({children}:htmlChildren) {
   return (
     <div>
-        <h1>Cabecalho</h1>
-        {children}
+        
     </div>
   )
 }
