@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from '../Home'
 import Layout from '../../Components/Layout';
-import { useState } from 'react';
 import { JSX } from 'react/jsx-runtime';
 
 
@@ -11,6 +10,9 @@ class Caminho {
         this.rotas = rotas
     }
 }
+
+
+
 const caminho = new Caminho([])
 
 export default function Rotas() {
