@@ -23,3 +23,17 @@
     background: var(--DarkModeTerciario);
     transition: .5s;
 }
+.sideBarLightMode{
+    background: var(--DarkModeTerciario);
+}
+.sideBarLightMode nav{
+    background: var(--DarkModeSecondary);
+    
+}
+
+.sideBarDarkMode{
+    background: var(--LightModeTerciario);
+}
+.sideBarDarkMode nav{
+    background: var(--LightModeSecondary);
+}

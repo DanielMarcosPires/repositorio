@@ -1,24 +1,33 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from '../Home'
+import Layout from '../../Components/Layout';
+import { useState } from 'react';
+import { JSX } from 'react/jsx-runtime';
 
-const rotas = [
-    {
-        junim: "/",
-        nome: "",
-        element: <Home />
+
+class Caminho {
+    rotas: { path: string; Element: JSX.Element; }[];
+    constructor(rotas: { path: string; name: string; Element: JSX.Element; }[]) {
+        this.rotas = rotas
     }
-];
+}
+const caminho = new Caminho([])
 
 export default function Rotas() {
+    
+    caminho.rotas=[{path:"/",Element:<Home/>}]
+
     return (
-        <Routes>
-            {rotas.map((rotas, key) =>
-                <Route
-                    path={rotas.junim}
-                    key={`rota${key}`}
-                    element={rotas.element}
-                />
-            )}
-        </Routes>
+        <>
+            <Layout>
+                <Routes>
+                    {
+                        caminho.rotas.map((rotas,index)=>
+                         <Route path={rotas.path} key={`Rota:${index}`} element={rotas.Element} />
+                        )
+                    }
+                </Routes>
+            </Layout>
+        </>
     )
 }
