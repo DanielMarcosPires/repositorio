@@ -4,27 +4,26 @@ import "./scss/style.scss"
 
 
 
-export default function Switch({obter}:any) {
 
-  const [flipflop,setFlipflop] = useState(false);
-  
+export default function Switch() {
 
-  function handleClick(){
-    obter(flipflop)
-  }
+  const [flipflop, setFlipflop] = useState(false);
 
   return (
     <div
-    onClick={()=>{
-      setFlipflop(!flipflop)
-      handleClick()
-    }}
-    className={
-      `
-       ${style.Switch}
-       ${flipflop ? `ligadoFundo`:`desligadoFundo`}
-      `}>
-        <span className={flipflop ? `ligado`:`desligado`}></span>
+      onClick={() => {
+        setFlipflop(!flipflop)
+      }}
+      className={
+        `
+            ${
+              style.Switch
+            }
+            ${
+              flipflop ? `ligadoFundo` : `desligadoFundo`
+            }
+        `}>
+      <span className={flipflop ? `ligado` : `desligado`}></span>
     </div>
   )
 }

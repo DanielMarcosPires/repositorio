@@ -6,15 +6,21 @@ import { ReactNode, useState } from "react";
 import {BiBell} from 'react-icons/bi'
 
 import Switch from '../Switch';
+import { Outlet } from 'react-router-dom';
 
 
 type htmlChildren = {
     children:ReactNode;
 }
+type JSXvalor ={
+    obterDarkMode:(e:boolean)=>void
+}
 
 export default function Layout({children}:htmlChildren) {
 
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
+    
+    
 
   return (
     <main
@@ -29,7 +35,7 @@ export default function Layout({children}:htmlChildren) {
                 <div className={style.LayoutGridCabecalhoMargem}>
                     <h1>Logo</h1>
                     <nav>
-                        <Switch obter={setDarkMode}/>
+                        <Switch />
                         <BiBell size={40} className={darkMode? `darkMode`:`lightMode`}/>
                         <p>perfil</p>
                     </nav>
