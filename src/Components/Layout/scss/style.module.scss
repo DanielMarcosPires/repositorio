@@ -7,11 +7,11 @@
 
     grid-template-rows: .1fr 1fr;
 
-    &Cabecalho {
+    &Cabecalho {    
         position: relative;
         z-index: 20;
         grid-area: header;
-        background: #2B9AB5;
+       
         box-shadow: 0 6px 10px #00000055;
         display: flex;
         justify-content: space-around;
@@ -24,7 +24,7 @@
             nav {
                 align-items: center;
 
-                background: #288DA6;
+                
                 box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
                 border-radius: 10px;
 
@@ -52,10 +52,10 @@
         flex-direction: column;
         align-items: end;
         grid-area: aside;
-        background: #195969;
+        background: var(--LightModeTerciario);
 
         nav {
-            background: #22798F;
+            background: var(--LightModeSecondary);
             text-align: center;
             border-radius: 10px 0px 0px 10px;
             width: 50%;

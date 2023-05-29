@@ -16,7 +16,6 @@ type htmlChildren = {
 export default function Layout({children}:htmlChildren) {
 
   const [darkMode, setDarkMode] = useState(false)
-  
   const reference = useRef(null);
    
   function handleClick(e:string){
@@ -35,17 +34,27 @@ export default function Layout({children}:htmlChildren) {
         `
     }
     >
-           <header className={style.LayoutGridCabecalho}>
+           <header className={
+            `
+            ${style.LayoutGridCabecalho}
+            ${darkMode? 'cabecalhoLightMode':'cabecalhoDarkMode'}
+            `
+           }>
                 <div className={style.LayoutGridCabecalhoMargem}>
                     <h2 className={style.Title}>Repositório</h2>
-                    <nav>
+                    <nav className={darkMode? 'navLightMode':'navDarkMode'}>
                         <Switch click={handleClick}  referencia={reference} />
                         <BiBell size={40} />
                         <p>perfil</p>
                     </nav>
                 </div>
            </header>
-           <aside className={style.LayoutGridSideBar}>
+           <aside className={
+            `
+            ${style.LayoutGridSideBar}
+            ${darkMode? '':''}
+            `
+           }>
                <RxCross2/>
                 <nav>
                     <a href="#">Home</a>

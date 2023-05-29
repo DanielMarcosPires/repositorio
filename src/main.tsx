@@ -1,5 +1,6 @@
 import React from 'react'
 import './style/style.scss'
+import './Color/style.scss'
 
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'

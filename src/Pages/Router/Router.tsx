@@ -13,7 +13,11 @@ export default function Rotas() {
     return (
         <Routes>
             {rotas.map((rotas, key) =>
-                <Route path={rotas.junim} key={`rota${key}`} element={rotas.element} />
+                <Route
+                    path={rotas.junim}
+                    key={`rota${key}`}
+                    element={rotas.element}
+                />
             )}
         </Routes>
     )

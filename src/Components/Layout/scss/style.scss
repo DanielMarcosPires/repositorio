@@ -3,6 +3,23 @@
     transition: .5s;
 }
 .lightMode{
-    color: #000;
+    color: #ffffffdd;
+    text-shadow: 0 0 4px #ffffffaa;
+    transition: .5s;
+}
+.cabecalhoDarkMode{
+    background: var(--LightModePrimary);
+    transition: .5s;
+}
+.cabecalhoLightMode{
+    background: var(--DarkModeSecondary);
+    transition: .5s;
+}
+.navDarkMode{
+    background: var(--LightModeQuarternario);
+    transition: .5s;
+}
+.navLightMode{
+    background: var(--DarkModeTerciario);
     transition: .5s;
 }
