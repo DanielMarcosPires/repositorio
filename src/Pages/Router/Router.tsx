@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-import Layout from '../../Components/Layout'
 import Home from '../Home'
 
 const rotas = [
@@ -8,10 +7,9 @@ const rotas = [
         nome: "",
         element: <Home />
     }
-]
+];
 
 export default function Rotas() {
-
     return (
         <Routes>
             {rotas.map((rotas, key) =>

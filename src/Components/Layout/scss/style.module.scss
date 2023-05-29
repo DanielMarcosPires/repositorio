@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 .LayoutGrid {
     display: grid;
     grid-template:
@@ -36,7 +37,9 @@
                 height: 65px;
                 width: 386px;
             }
-
+            .Title{
+                font-family: 'Rock Salt', cursive;
+            }
             width: 75%;
         }
 
