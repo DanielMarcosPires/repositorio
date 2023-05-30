@@ -9,12 +9,14 @@ import { RxCross2 } from 'react-icons/rx'
 import Switch from '../Switch';
 import { Outlet } from 'react-router-dom';
 
+interface jsxState{
+  extracao:(extracao:boolean)=>void
+}
 
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function Layout() {
+export default function Layout({extracao}:jsxState) {
 
   const [darkMode, setDarkMode] = useState(false)
+  extracao(darkMode)
   const reference = useRef(null);
 
   function handleClick(e: string) {
