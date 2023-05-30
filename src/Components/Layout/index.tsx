@@ -1,19 +1,18 @@
 import style from './scss/style.module.scss'
 import './scss/style.scss'
 
-import { ReactNode, useRef, useState } from "react";
+import {  useRef, useState } from "react";
 
 import { BiBell } from 'react-icons/bi'
 import { RxCross2 } from 'react-icons/rx'
 
 import Switch from '../Switch';
+import { Outlet } from 'react-router-dom';
 
 
-type htmlChildren = {
-  children: ReactNode;
-}
 
-export default function Layout({ children }: htmlChildren) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function Layout() {
 
   const [darkMode, setDarkMode] = useState(false)
   const reference = useRef(null);
@@ -24,7 +23,7 @@ export default function Layout({ children }: htmlChildren) {
     }
     return setDarkMode(true)
   }
-  
+
   return (
     <main className={` ${style.LayoutGrid} ${darkMode ? `lightMode` : `darkMode`}`}>
       <header className={
@@ -52,7 +51,7 @@ export default function Layout({ children }: htmlChildren) {
           <a href="#">Home</a>
         </nav>
       </aside>
-      {children}
+      <Outlet />
     </main>
   )
 }
